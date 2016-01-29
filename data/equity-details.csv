@@ -1,0 +1,103 @@
+EPIC,Company Name,Asset Type,Sector,Currency
+III,3I GROUP PLC,Equity,Financials,GBP
+ADN,ABERDEEN ASSET MANAGEMENT PLC,Equity,Financials,GBP
+ADM,ADMIRAL GROUP PLC,Equity,Financials,GBP
+AAL,ANGLO AMERICAN PLC,Equity,Materials,GBP
+ANTO,ANTOFAGASTA PLC,Equity,Materials,GBP
+ARM,ARM HOLDINGS PLC,Equity,Information Technology,GBP
+AHT,ASHTEAD GROUP PLC,Equity,Industrials,GBP
+ABF,ASSOCIATED BRITISH FOODS PLC,Equity,Consumer Staples,GBP
+AZN,ASTRAZENECA PLC,Equity,Health Care,GBP
+AV.,AVIVA PLC,Equity,Financials,GBP
+BAB,BABCOCK INTERNATIONAL GROUP PLC,Equity,Industrials,GBP
+BA.,BAE SYSTEMS PLC,Equity,Industrials,GBP
+BARC,BARCLAYS PLC,Equity,Financials,GBP
+BDEV,BARRATT DEVELOPMENTS PLC,Equity,Consumer Discretionary,GBP
+BG,BG GROUP PLC,Equity,Energy,GBP
+BLT,BHP BILLITON PLC,Equity,Materials,GBP
+BP,BP PLC,Equity,Energy,GBP
+BATS,BRITISH AMERICAN TOBACCO PLC,Equity,Consumer Staples,GBP
+BLND,BRITISH LAND CO PLC,Equity,Financials,GBP
+BT.A,BT GROUP PLC,Equity,Telecommunications,GBP
+BNZL,BUNZL PLC,Equity,Industrials,GBP
+BRBY,BURBERRY GROUP PLC,Equity,Consumer Discretionary,GBP
+CPI,CAPITA PLC,Equity,Industrials,GBP
+CCL,CARNIVAL PLC,Equity,Consumer Discretionary,GBP
+CNA,CENTRICA PLC,Equity,Utilities,GBP
+CCH,COCA COLA HBC AG,Equity,Consumer Staples,GBP
+CPG,COMPASS GROUP PLC,Equity,Consumer Discretionary,GBP
+CRH,CRH PLC,Equity,Materials,GBP
+DGE,DIAGEO PLC,Equity,Consumer Staples,GBP
+DLG,DIRECT LINE INSURANCE PLC,Equity,Financials,GBP
+DC.,DIXONS CARPHONE PLC,Equity,Consumer Discretionary,GBP
+EZJ,EASYJET PLC,Equity,Industrials,GBP
+EXPN,EXPERIAN PLC,Equity,Industrials,GBP
+FRES,FRESNILLO PLC,Equity,Materials,GBP
+GFS,G4S PLC,Equity,Industrials,GBP
+GKN,GKN PLC,Equity,Consumer Discretionary,GBP
+GSK,GLAXOSMITHKLINE PLC,Equity,Health Care,GBP
+GLEN,GLENCORE PLC,Equity,Materials,GBP
+HMSO,HAMMERSON REIT PLC,Equity,Financials,GBP
+HL,HARGREAVES LANSDOWN PLC,Equity,Financials,GBP
+HIK,HIKMA PHARMACEUTICALS PLC,Equity,Health Care,GBP
+HSBA,HSBC HOLDINGS PLC,Equity,Financials,GBP
+IMT,IMPERIAL TOBACCO GROUP PLC,Equity,Consumer Staples,GBP
+ISAT,INMARSAT PLC,Equity,Telecommunications,GBP
+IHG,INTERCONTINENTAL HOTELS GROUP PLC,Equity,Consumer Discretionary,GBP
+IAG,INTERNATIONAL AIRLINES GROUP SA,Equity,Industrials,GBP
+ITRK,INTERTEK GROUP PLC,Equity,Industrials,GBP
+INTU,INTU PROPERTIES REIT PLC,Equity,Financials,GBP
+ITV,ITV PLC,Equity,Consumer Discretionary,GBP
+JMAT,JOHNSON MATTHEY PLC,Equity,Materials,GBP
+KGF,KINGFISHER PLC,Equity,Consumer Discretionary,GBP
+LAND,LAND SECURITIES GROUP REIT PLC,Equity,Financials,GBP
+LGEN,LEGAL & GENERAL GROUP PLC,Equity,Financials,GBP
+LLOY,LLOYDS BANKING GROUP PLC,Equity,Financials,GBP
+LSE,LONDON STOCK EXCHANGE GROUP PLC,Equity,Financials,GBP
+MKS,MARKS & SPENCER GROUP PLC,Equity,Consumer Discretionary,GBP
+MGGT,MEGGITT PLC,Equity,Industrials,GBP
+MERL,MERLIN ENTERTAINMENT GROUP PLC,Equity,Consumer Discretionary,GBP
+MNDI,MONDI PLC,Equity,Materials,GBP
+MRW,MORRISON WM SUPERMARKETS PLC,Equity,Consumer Staples,GBP
+NG.,NATIONAL GRID PLC,Equity,Utilities,GBP
+NXT,NEXT PLC,Equity,Consumer Discretionary,GBP
+OML,OLD MUTUAL PLC,Equity,Financials,GBP
+PSON,PEARSON PLC,Equity,Consumer Discretionary,GBP
+PSN,PERSIMMON PLC,Equity,Consumer Discretionary,GBP
+PRU,PRUDENTIAL PLC,Equity,Financials,GBP
+RRS,RANDGOLD RESOURCES LTD,Equity,Materials,GBP
+RB.,RECKITT BENCKISER GROUP PLC,Equity,Consumer Staples,GBP
+REL,RELX PLC,Equity,Consumer Discretionary,GBP
+RIO,RIO TINTO PLC,Equity,Materials,GBP
+RR,ROLLS-ROYCE HOLDINGS PLC,Equity,Industrials,GBP
+RBS,ROYAL BANK OF SCOTLAND GROUP PLC,Equity,Financials,GBP
+RDSA,ROYAL DUTCH SHELL PLC CLASS A,Equity,Energy,GBP
+RDSB,ROYAL DUTCH SHELL PLC CLASS B,Equity,Energy,GBP
+RMG,ROYAL MAIL PLC,Equity,Industrials,GBP
+RSA,RSA INSURANCE GROUP PLC,Equity,Financials,GBP
+SAB,SABMILLER PLC,Equity,Consumer Staples,GBP
+SGE,SAGE GROUP PLC,Equity,Information Technology,GBP
+SBRY,J SAINSBURY PLC,Equity,Consumer Staples,GBP
+SDR,SCHRODERS PLC,Equity,Financials,GBP
+SVT,SEVERN TRENT PLC,Equity,Utilities,GBP
+SHP,SHIRE PLC,Equity,Health Care,GBP
+SKY,SKY PLC,Equity,Consumer Discretionary,GBP
+SN,SMITH & NEPHEW PLC,Equity,Health Care,GBP
+SMIN,SMITHS GROUP PLC,Equity,Industrials,GBP
+SPD,SPORTS DIRECT INTERNATIONAL PLC,Equity,Consumer Discretionary,GBP
+SSE,SSE PLC,Equity,Utilities,GBP
+STJ,ST JAMESS PLACE PLC,Equity,Financials,GBP
+STAN,STANDARD CHARTERED PLC,Equity,Financials,GBP
+SL.,STANDARD LIFE PLC,Equity,Financials,GBP
+TW.,TAYLOR WIMPEY PLC,Equity,Consumer Discretionary,GBP
+TSCO,TESCO PLC,Equity,Consumer Staples,GBP
+TPK,TRAVIS PERKINS PLC,Equity,Industrials,GBP
+TUI,TUI AG,Equity,Consumer Discretionary,GBP
+ULVR,UNILEVER PLC,Equity,Consumer Staples,GBP
+UU,UNITED UTILITIES GROUP PLC,Equity,Utilities,GBP
+VOD,VODAFONE GROUP PLC,Equity,Telecommunications,GBP
+WEIR,WEIR GROUP PLC,Equity,Industrials,GBP
+WTB,WHITBREAD PLC,Equity,Consumer Discretionary,GBP
+WOS,WOLSELEY PLC,Equity,Industrials,GBP
+WPP,WPP PLC,Equity,Consumer Discretionary,GBP
+GBP,Great British Pounds,Csah,None,GBP
