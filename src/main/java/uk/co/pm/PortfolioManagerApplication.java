@@ -103,7 +103,7 @@ public class PortfolioManagerApplication extends ApplicationBase {
                     stm.setString(2, record.get("Date Time"));
                     stm.setString(3, record.get("Mid Price"));
                     stm.setString(4, record.get("Currency"));
-                    stm.executeUpdate();
+                    stm.executeUpdate(); //TODO fix java.sql.SQLException: Parameter not set exception
                 }
 
             }
