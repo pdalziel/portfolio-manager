@@ -63,14 +63,8 @@ public class PortfolioManagerApplication extends ApplicationBase {
             File file = (File) iterator.next();
             ParseFile(file.toPath());
         }
+        watchDirectory(dataPath);
 
-
-
-        System.out.println("watchDirectory " + dataPath+equityFolder);
-
-        watchDirectory(dataPath+equityFolder);
-        System.out.println("watchDirectory " + dataPath+pricingFolder);
-        watchDirectory(dataPath+pricingFolder);
     }
 
     public static void main(String[] args) throws Exception {
@@ -94,93 +88,54 @@ public class PortfolioManagerApplication extends ApplicationBase {
             System.err.println("Crash in dir watcher");
         }
     }
-
+   /* Refactored to use https://commons.apache.org/proper/commons-csv/
+    * as it will allow more flexibility and protect against badly formatted files, e.g. infinite line
+    * csv - Paul
+   * */
     private void ParseFile(Path path) {
-
-        BufferedReader br = null;
         PreparedStatement stm;
-
-        // TODO validate file contents
-        // TODO create error alerts/logging
-        // TODO file-loading mechanism should be flexible to handle other file types
-
-        if (path.toString().contains("details")) { // needs to be more robust
-            stm = equityStm;
-        } else {
-            stm = priceStm;
-        }
+        // create parser and define expected file format
         try (CSVParser parser = new CSVParser(new FileReader(path.toFile()), CSVFormat.DEFAULT.withHeader())) {
-            for (CSVRecord record : parser) {
-                System.out.println(path);
-                // check header to see if equity or pricing
-                if (record.isMapped("Date")){
-                    System.out.println("TRUE");
-                    System.out.println(record.get("EPIC"));
-                    System.out.println(record.get("Date"));
+            if(parser.getHeaderMap().containsKey("Date Time")){ // check if this is the pricing csv
+                stm = priceStm;
+                for (CSVRecord record : parser) {
+                    stm.setString(1, record.get("EPIC"));
+                    stm.setString(2, record.get("Date Time"));
+                    stm.setString(3, record.get("Mid Price"));
+                    stm.setString(4, record.get("Currency"));
+                    stm.executeUpdate();
                 }
-                else {
-                    System.out.println("FALSE");
-                    System.out.println(record.get("EPIC"));
-                    System.out.println(record.get("Company Name"));
-                    System.out.println(record.get("Asset Type"));
-                    System.out.println(record.get("Sector"));
-                    System.out.println(record.get("Currency"));
+
+            }
+            else if(parser.getHeaderMap().containsKey("Company Name")){  // check if this is the equity csv
+
+                stm = equityStm;
+                for (CSVRecord record : parser) {
+                    stm.setString(1, record.get("EPIC"));
+                    stm.setString(2, record.get("Company Name"));
+                    stm.setString(3, record.get("Asset Type"));
+                    stm.setString(4, record.get("Sector"));
+                    stm.setString(5, record.get("Currency"));
+                    stm.executeUpdate();
                 }
+
+            }
+            else{ // could use reg exp to check headers
+                System.out.println("bad format = " + path);
+                System.out.println(parser.getHeaderMap().toString());
+                throw new BadFileFormatException();// empty but may be needed in future sprints..
             }
             parser.close();
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();
         } catch (IOException e1) {
             e1.printStackTrace();
-        }
-/*
-
-        try {
-
-            File csvFile = path.toFile();
-
-            String line;
-            String cvsSplitBy = ",";
-
-            br = new BufferedReader(new FileReader(csvFile));
-            boolean header = true;
-            while ((line = br.readLine()) != null) {
-                if(header) {
-                    header = false;
-                    continue;
-                }
-
-                // use comma as separator
-                String[] values = line.split(cvsSplitBy);
-
-                stm.setString(1, values[0]);
-                stm.setString(3, values[2]);
-                stm.setString(4, values[3]);
-                if (priceStm == stm) {
-                    String[] dateValues = values[1].split("-");
-                    if (dateValues.length > 1) {
-                        stm.setString(2, dateValues[0]);
-                        stm.setString(5, dateValues[1]);
-                    } else {
-                        throw new IOException("Invalid date fields, no quarter info.");
-                    }
-                } else {
-                    stm.setString(2, values[1]);
-                    stm.setString(5, values[4]);
-                }
-                stm.executeUpdate();
-            }
-        } catch (SQLException | IOException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }*/
+        } catch (BadFileFormatException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
