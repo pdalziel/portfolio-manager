@@ -100,9 +100,13 @@ public class PortfolioManagerApplication extends ApplicationBase {
                 stm = priceStm;
                 for (CSVRecord record : parser) {
                     stm.setString(1, record.get("EPIC"));
-                    stm.setString(2, record.get("Date Time"));
+                    String temp = record.get("Date Time");
+                    String parts[] = temp.split("-");
+                    stm.setString(2, parts[0].toString());
                     stm.setString(3, record.get("Mid Price"));
                     stm.setString(4, record.get("Currency"));
+                    stm.setString(5, parts[1].toString());
+                    System.out.println(stm.toString());
                     stm.executeUpdate(); //TODO fix java.sql.SQLException: Parameter not set exception
                 }
 
